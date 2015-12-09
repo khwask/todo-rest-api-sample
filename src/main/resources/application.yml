@@ -1,0 +1,15 @@
+spring:
+  profiles:
+    active: dev
+---
+spring:
+  profiles: dev
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:~/tmp/todo;MODE=PostgreSQL
+    username: sa
+    password: 
+  jpa:
+    database: H2
+    hibernate:
+      ddl-auto: create-drop
